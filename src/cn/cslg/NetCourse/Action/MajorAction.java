@@ -6,10 +6,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.struts2.ServletActionContext;
-import org.apache.struts2.interceptor.ApplicationAware;
 import org.apache.struts2.interceptor.RequestAware;
-import org.apache.struts2.interceptor.SessionAware;
-
 
 import cn.cslg.NetCourse.Dao.CourseDao;
 import cn.cslg.NetCourse.Dao.CourseSystemDao;
