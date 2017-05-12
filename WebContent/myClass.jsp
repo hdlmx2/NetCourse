@@ -196,11 +196,11 @@
 
 	</div>
 	<s:if test="#myIndex==0">
-	<!-- <h1>输出学生的课程</h1> -->
+		<!-- <h1>输出学生的课程</h1> -->
 		<s:include value="student_course.jsp"></s:include>
 	</s:if>
 	<s:elseif test="#myIndex==3">
-	<!-- <h1>输出学生的设置</h1> -->
+		<!-- <h1>输出学生的设置</h1> -->
 		<s:include value="student_setting.jsp"></s:include>
 	</s:elseif>
 

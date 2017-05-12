@@ -4,19 +4,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>个人设置</title>
-    <link rel="stylesheet" type="text/css" href="css/studentSetting-style.css">
-    <script src="js/jquery-2.2.0.min.js"></script>
-    <script src="js/divjs.js"></script>
-    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-    <link type="text/css" rel="stylesheet" href='http://fonts.googleapis.com/css?family=Ubuntu:300italic,300,700'/>
-    <link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
-    <link type="text/css" rel="stylesheet" href="css/flexslider.css"/>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
-    <script type="text/javascript" src="js/custom.js"></script>
-    <script>
+<meta charset="UTF-8">
+<title>个人设置</title>
+<link rel="stylesheet" type="text/css"
+	href="css/studentSetting-style.css">
+<script src="js/jquery-2.2.0.min.js"></script>
+<script src="js/divjs.js"></script>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<link type="text/css" rel="stylesheet"
+	href='http://fonts.googleapis.com/css?family=Ubuntu:300italic,300,700' />
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+<link type="text/css" rel="stylesheet" href="css/flexslider.css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script>
         jQuery(document).ready(function ($) {
             $('.theme-login').click(function () {
                 $('.theme-popover-mask').fadeIn(100);
@@ -30,7 +32,7 @@
         })
     </script>
 
-    <script type="text/javascript">
+<script type="text/javascript">
         (function () {
 
             var time = null;
@@ -99,93 +101,87 @@
 <body>
 
 
-<s:include value="head.jsp"></s:include>
-<div class="space"></div>
-<div class="personalTitle">
-    <div class="personalTitle_center">
-        <div class="mySpace">
-
-        </div>
-        <div class="myImg">
-            <a href=""><img src="image/20_big.jpg"></a>
-        </div>
-    <span class="userName">
-        <font class="userName-font"><s:property value="#session.student.username"/></font>
-        <font class="discipline">专业：</font>
-        <font class="discipline-name"><s:property value="#session.student.major.majorName"/></font>
-    </span>
-    </div>
-</div>
-<div class="personalCenter">
-    <div class="personalCenter_body">
-        <div class="study">
+	<s:include value="head.jsp"></s:include>
+	<div class="space"></div>
+	<div class="personalTitle">
+		<div class="personalTitle_center">
+			<div class="mySpace"></div>
+			<div class="myImg">
+				<a href=""><img src="image/20_big.jpg"></a>
+			</div>
+			<span class="userName"> <font class="userName-font"><s:property
+						value="#session.student.username" /></font> <font class="discipline">专业：</font>
+				<font class="discipline-name"><s:property
+						value="#session.student.major.majorName" /></font>
+			</span>
+		</div>
+	</div>
+	<div class="personalCenter">
+		<div class="personalCenter_body">
+			<div class="study">
 
 
-            <div><font>学习</font></div>
+				<div>
+					<font>学习</font>
+				</div>
 
-        </div>
-    </div>
-
-
-</div>
-<div class="learnCourse">
-
-    <div class="leanrtitle">
-        <div class="learing_space"></div>
-        <div class="learing">个人信息</div>
-        <div class="learntitleBorder">
-            <div class="learntitleBorder_body">
-
-            </div>
-
-        </div>
-    </div>
+			</div>
+		</div>
 
 
-    <div class="settingBody">
-        <form action="modify" method="post">
-            <div class="settingLable">
-                <ul>
-                    <li>姓</li>
-                    <li>名</li>
-                    <li>邮箱</li>
-                    <li>原始密码</li>
-                    <li>新密码</li>
-                    <li>确认新密码</li>
-                </ul>
-            </div>
-            <div class="settingForm">
-                <ul>
-                    <li>
-                        <input type="text" name="firstName" id="" value="<s:property value="#session.student.firstName"/>">
-                    </li>
-                    <li>
-                        <input type="text" name="lastName" id="" value="<s:property value="#session.student.lastName"/>">
-                    </li>
-                    <li>
-                        <input type="text" name="email" id="" value="<s:property value="#session.student.email"/>">
-                    </li>
-                    <li>
-                        <input type="password" name="orginPassword" id="">
-                    </li>
-                    <li>
-                        <input type="password" name="newPassword" id="">
-                    </li>
-                    <li>
-                        <input type="password" name="confimPassword" id="">
-                    </li>
-                </ul>
+	</div>
+	<div class="learnCourse">
 
-            </div>
-            <div class="settingSubmit">
-                <input type="submit" value="保存"></input>
-            </div>
-        </form>
-    </div>
-    <div class="course_buttom"></div>
+		<div class="leanrtitle">
+			<div class="learing_space"></div>
+			<div class="learing">个人信息</div>
+			<div class="learntitleBorder">
+				<div class="learntitleBorder_body"></div>
 
-</div>
-<%-- <div class="copyright">
+			</div>
+		</div>
+
+
+		<div class="settingBody">
+			<form action="modify" method="post">
+				<div class="settingLable">
+					<ul>
+						<li>姓</li>
+						<li>名</li>
+						<li>邮箱</li>
+						<li>原始密码</li>
+						<li>新密码</li>
+						<li>确认新密码</li>
+					</ul>
+				</div>
+				<div class="settingForm">
+					<ul>
+						<li><input type="text" name="firstName" id=""
+							value="<s:property value="#session.student.firstName"/>">
+						</li>
+						<li><input type="text" name="lastName" id=""
+							value="<s:property value="#session.student.lastName"/>">
+						</li>
+						<li><input type="text" name="email" id=""
+							value="<s:property value="#session.student.email"/>"></li>
+						<li><input type="password" name="orginPassword" id="">
+						</li>
+						<li><input type="password" name="newPassword" id="">
+						</li>
+						<li><input type="password" name="confimPassword" id="">
+						</li>
+					</ul>
+
+				</div>
+				<div class="settingSubmit">
+					<input type="submit" value="保存"></input>
+				</div>
+			</form>
+		</div>
+		<div class="course_buttom"></div>
+
+	</div>
+	<%-- <div class="copyright">
     <div class="leftspace">
     </div>
     <div class="center">
@@ -231,6 +227,6 @@
 <div class="theme-popover-mask"></div>
 <input type="file" >
  --%>
- <s:include value="copyright.jsp"></s:include>
+	<s:include value="copyright.jsp"></s:include>
 </body>
 </html>

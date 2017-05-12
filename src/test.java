@@ -1,5 +1,3 @@
-import java.util.List;
-
 import cn.cslg.NetCourse.Dao.CourseDao;
 import cn.cslg.NetCourse.Dao.CourseSystemDao;
 import cn.cslg.NetCourse.Dao.HasLearnedDao;
@@ -10,11 +8,8 @@ import cn.cslg.NetCourse.Dao.StudentDao;
 import cn.cslg.NetCourse.Dao.TeacherDao;
 import cn.cslg.NetCourse.Dao.VideoDao;
 import cn.cslg.NetCourse.pojo.Course;
-import cn.cslg.NetCourse.pojo.CourseSystem;
-import cn.cslg.NetCourse.pojo.HasLearned;
 import cn.cslg.NetCourse.pojo.Institute;
 import cn.cslg.NetCourse.pojo.Major;
-import cn.cslg.NetCourse.pojo.Question;
 import cn.cslg.NetCourse.pojo.Student;
 import cn.cslg.NetCourse.pojo.Teacher;
 import cn.cslg.NetCourse.pojo.Video;

@@ -101,7 +101,8 @@
 </head>
 <body>
 	<form action="saveCourse" method="post">
-	<input type="text" name="courseId" style="display: none" value="${thisCourse.courseId}">
+		<input type="text" name="courseId" style="display: none"
+			value="${thisCourse.courseId}">
 		<div class=" course_introduce_title">
 			<div class="course_introduce_title_body">
 				<div class="course_introdece_body">

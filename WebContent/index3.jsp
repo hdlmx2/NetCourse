@@ -323,7 +323,7 @@
 				</div>
 			</div>
 			<s:set name="student" value="#session.student" />
-		<%-- 	<s:property value="#session.student"/>
+			<%-- 	<s:property value="#session.student"/>
 			<s:property value="student"/> --%>
 			<s:if test="#student==null">
 				<div class="register-login">
@@ -758,19 +758,19 @@
 			<h2 style="color: white">登&nbsp;&nbsp;录</h2>
 		</div>
 		<div class="theme-popbod dform">
-			<form class="theme-signin" name="loginform" action="login" method="post">
+			<form class="theme-signin" name="loginform" action="login"
+				method="post">
 				<ol>
 
 					<li><strong></strong><input placeholder="用户名/邮箱/手机"
-						class="ipt" type="text" name="username"  size="20" /></li>
+						class="ipt" type="text" name="username" size="20" /></li>
 					<p>&nbsp;</p>
 
 					<li><strong></strong><input placeholder="密码" class="ipt"
-						type="password" name="password"  size="20" /></li>
+						type="password" name="password" size="20" /></li>
 					<p></p>
 					<p></p>
-					<li><input class="btn btn-primary" type="submit" 
-						value=" 登 录 " /></li>
+					<li><input class="btn btn-primary" type="submit" value=" 登 录 " /></li>
 				</ol>
 			</form>
 			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;

@@ -348,7 +348,9 @@
 	<div class="play">
 		<div class="play_body">
 			<div class="viedo_play">
-			<video src="../sourse/cs/c/2.第一个C语言程序：hello world.mp4" controls="controls" width="600px" height="300px" preload="auto" poster=""></video>
+				<video src="../sourse/cs/c/2.第一个C语言程序：hello world.mp4"
+					controls="controls" width="600px" height="300px" preload="auto"
+					poster=""></video>
 			</div>
 			<div class="viedo_list">
 				<div class="course_title">

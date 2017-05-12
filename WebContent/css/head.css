@@ -418,10 +418,25 @@ pace:hover {
 	text-decoration: none;
 }
 
-.navbox-tiles .tile:not (:nth-child(3n+3) ) {
-	margin-right: 4.54545454545455%;
-}
+.navbox-tiles
+ 
+.tile
+:not
+ 
+(
+:nth-child(3n+3)
+ 
+)
+{
+margin-right
+:
+ 
+4
+.54545454545455
+%;
 
+
+}
 .navbox-tiles .tile:nth-child(n+4) {
 	margin-top: 15px;
 }

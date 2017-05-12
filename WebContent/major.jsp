@@ -236,7 +236,7 @@
 
 		<s:include value="copyright.jsp"></s:include>
 
-<%-- 		<s:include value="login.jsp"></s:include>
+		<%-- 		<s:include value="login.jsp"></s:include>
  --%>
 
 

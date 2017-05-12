@@ -4,6 +4,7 @@
 	*display: inline;
 	*zoom: 1;
 }
+
 .kitjs-form-combox-wrapper.suggesting .kitjs-form-combobox-input {
 	background: url("/KitJs/KitJs/src/img/loading.gif") right no-repeat;
 }

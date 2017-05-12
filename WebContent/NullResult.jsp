@@ -109,15 +109,15 @@
 					没有找到与"<font color="red">${Key }</font>"相关的课程：
 				</div>
 			</div>
-			
-			
-			</div>
-			<div class="courseSpace"></div>
+
 
 		</div>
+		<div class="courseSpace"></div>
 
-	
-	
+	</div>
+
+
+
 	<s:include value="copyright.jsp"></s:include>
 </body>
 </html>

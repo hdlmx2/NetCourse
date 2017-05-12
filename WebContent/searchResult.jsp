@@ -114,8 +114,7 @@
 					<div class="course">
 						<a href="course?course=${courseId }">
 							<div class="courseImage">
-								<img src="${image }" alt="" width="260px"
-									height="150px">
+								<img src="${image }" alt="" width="260px" height="150px">
 							</div>
 							<div class="a_space"></div>
 							<div class="courseName">${courseName }</div>
@@ -124,7 +123,7 @@
 
 					</div>
 				</s:iterator>
-				
+
 
 			</div>
 			<div class="courseSpace"></div>

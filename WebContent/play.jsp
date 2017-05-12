@@ -142,7 +142,7 @@
 								<li><a class="playingvideo"
 									href="play?major=${major.majorId }&course=${course.courseId }&video=${videoId}"><font>${videoName }</font></a>
 								</li>
-								
+
 							</s:if>
 							<s:else>
 								<li><a class="videolistA"

@@ -411,12 +411,12 @@
 			<div class="grade_body grade_border">
 				<div class="course_body">
 					<ul>
-						
+
 
 						<s:iterator value="#request.grade1">
-						<li class="course_list"><a href="${courseId }">${courseName }</a></li>
-	
-							</s:iterator>
+							<li class="course_list"><a href="${courseId }">${courseName }</a></li>
+
+						</s:iterator>
 
 
 					</ul>

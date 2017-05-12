@@ -14,10 +14,12 @@
 	background: none;
 	-webkit-transition: box-shadow 300ms ease-in 0;
 }
+
 .kitjs-form-radio:hover, .kitjs-form-radio:active {
 	border-color: #aaa;
 	box-shadow: 0 0 10px #aaa;
 }
+
 .kitjs-form-radio:checked {
 	background-color: #aaa;
 	border-color: #aaa;

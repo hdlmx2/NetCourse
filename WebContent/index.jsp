@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<%@taglib prefix="s" uri="/struts-tags"%>
+<%@taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +8,8 @@
 <title>网络课堂-常熟理工学院</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <!-- <link rel="stylesheet" type="text/css" href="head.css">
- --><script src="js/jquery-2.2.0.min.js"></script>
+ -->
+<script src="js/jquery-2.2.0.min.js"></script>
 <script src="js/divjs.js"></script>
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 <link type="text/css" rel="stylesheet"
@@ -369,6 +370,7 @@
 	<s:include value="copyright.jsp"></s:include>
 
 
-<%-- 	<s:include value="login.jsp"></s:include>
- --%></body>
+	<%-- 	<s:include value="login.jsp"></s:include>
+ --%>
+</body>
 </html>
