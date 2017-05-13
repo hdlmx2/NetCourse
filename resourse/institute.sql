@@ -1,3 +1,5 @@
+
+use netcours;
 insert into tb_institute values(1,'计算机科学与工程学院');
 insert into tb_institute values(2,'人文学院');
 insert into tb_institute values(3,'外国语学院');

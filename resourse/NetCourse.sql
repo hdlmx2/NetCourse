@@ -13,6 +13,7 @@ File Encoding         : 65001
 Date: 2016-05-11 09:45:29
 */
 
+use netcourse;
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------

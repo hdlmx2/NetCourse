@@ -1,6 +1,8 @@
 -- ----
 -- 计算机学院
 -- ---
+
+use major;
 insert into tb_major values(101,'计算机科学与技术',1);
 insert into tb_major values(102,'软件工程',1);
 insert into tb_major values(103,'物联网工程',1);
