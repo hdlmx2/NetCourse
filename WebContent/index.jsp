@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>网络课堂-常熟理工学院</title>
+<title>网络课堂</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <!-- <link rel="stylesheet" type="text/css" href="head.css">
  -->
