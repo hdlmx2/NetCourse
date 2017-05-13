@@ -20,7 +20,7 @@ public class TeacherDao {
 			session.save(teacher);
 			tx.commit();
 //			System.out.println(teacher);
-//			System.out.println("Ìí¼Ó½ÌÊ¦³É¹¦£¡");
+//			System.out.println("æ·»åŠ æ•™å¸ˆæˆåŠŸï¼");
 		} catch (Exception e) {
 			e.printStackTrace();
 			if (tx != null)
@@ -35,7 +35,7 @@ public class TeacherDao {
 			session.delete(teacher);
 			tx.commit();
 //			System.out.println(teacher);
-//			System.out.println("É¾³ı½ÌÊ¦³É¹¦£¡");
+//			System.out.println("åˆ é™¤æ•™å¸ˆæˆåŠŸï¼");
 		} catch (Exception e) {
 			e.printStackTrace();
 			if (tx != null)
@@ -50,7 +50,7 @@ public class TeacherDao {
 			session.update(teacher);
 			tx.commit();
 //			System.out.println(teacher);
-//			System.out.println("ĞŞ¸Ä½ÌÊ¦³É¹¦£¡");
+//			System.out.println("ä¿®æ”¹æ•™å¸ˆæˆåŠŸï¼");
 		} catch (Exception e) {
 			e.printStackTrace();
 			if (tx != null)

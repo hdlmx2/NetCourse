@@ -19,7 +19,7 @@ public class VideoDao {
 			session.save(video);
 			tx.commit();
 //			System.out.println(video);
-//			System.out.println("ÊÓÆµÌí¼Ó³É¹¦£¡");
+//			System.out.println("è§†é¢‘æ·»åŠ æˆåŠŸï¼");
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -34,7 +34,7 @@ public class VideoDao {
 			session.delete(video);
 			tx.commit();
 //			System.out.println(video);
-//			System.out.println("ÊÓÆµÉ¾³ı³É¹¦£¡");
+//			System.out.println("è§†é¢‘åˆ é™¤æˆåŠŸï¼");
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -50,7 +50,7 @@ public class VideoDao {
 			session.update(video);
 			tx.commit();
 //			System.out.println(video);
-//			System.out.println("ÊÓÆµÉ¾³ı³É¹¦£¡");
+//			System.out.println("è§†é¢‘åˆ é™¤æˆåŠŸï¼");
 
 		} catch (Exception e) {
 			e.printStackTrace();

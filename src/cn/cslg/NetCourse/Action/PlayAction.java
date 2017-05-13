@@ -37,14 +37,14 @@ public class PlayAction implements RequestAware {
 		majorid = httpRequest.getParameter("major");
 		System.err.println("MajorId" + majorid);
 
-		// ½«ÇëÇó²ÎÊıÖĞµÄcourseidºÍvideoid×ª»»³ÉÕûĞÎ
+		// å°†è¯·æ±‚å‚æ•°ä¸­çš„courseidå’Œvideoidè½¬æ¢æˆæ•´å½¢
 		Integer courseId = Integer.parseInt(courseid);
 		Integer voideId = Integer.parseInt(videoid);
 		Integer majorId = null;
 		Major major = null;
 
 		Course course = courseDao.search(courseId);
-		// µ±ÓÃ»§ÔÚÀÏÊ¦µÄÒ³Ãæ£¬²é¿´ÆäËùÊÚ¿Î³ÌÌø×ª¹ıÀ´Ê±£¬ÇëÇó²ÎÊıÊÇ²»´ømajorµÄ£¬´ËÊ±×ªĞÍ»á³öÏÖÒì³££¬ÒªÓÃifÅĞ¶ÏÒ»ÏÂ
+		// å½“ç”¨æˆ·åœ¨è€å¸ˆçš„é¡µé¢ï¼ŒæŸ¥çœ‹å…¶æ‰€æˆè¯¾ç¨‹è·³è½¬è¿‡æ¥æ—¶ï¼Œè¯·æ±‚å‚æ•°æ˜¯ä¸å¸¦majorçš„ï¼Œæ­¤æ—¶è½¬å‹ä¼šå‡ºç°å¼‚å¸¸ï¼Œè¦ç”¨ifåˆ¤æ–­ä¸€ä¸‹
 		if (majorid == "") {
 			 System.err.println(majorid);
 			
@@ -57,15 +57,15 @@ public class PlayAction implements RequestAware {
 
 		}
 
-		// ¸ù¾İÇëÇó²ÎÊıµÄcourseid²éÕÒ¿Î³Ì·µ»Ø¶ÔÏó
+		// æ ¹æ®è¯·æ±‚å‚æ•°çš„courseidæŸ¥æ‰¾è¯¾ç¨‹è¿”å›å¯¹è±¡
 
-		// ¸ù¾İ¿Î³Ì¶ÔÏó²éÕÒ³ö¸Ã¿Î³ÌµÄËùÓĞÊÓÆµ
+		// æ ¹æ®è¯¾ç¨‹å¯¹è±¡æŸ¥æ‰¾å‡ºè¯¥è¯¾ç¨‹çš„æ‰€æœ‰è§†é¢‘
 		List<Video> videos = videoDao.search(course);
 
 		Video toPlay = null;
 		/*
-		 * ÅĞ¶Ï²¥·ÅÄÄ¸öÊÓÆµ Èç¹ûÊÇ´Ó¿Î³ÌÒ³ÃæÌø×ª¹ıÀ´µÄ»°£¬Òª²¥·ÅµÄÊÓÆµµÄidÊÇ1Ö¸ÏòÊÓÆµÁĞ±íµÄµÚÒ»¸öÊÓÆµ
-		 * Èç¹ûÊÇ´Ó²¥·ÅÒ³ÃæÌø×ª¹ıÀ´µÄ»°£¬ÊÇÊ²Ã´id¾ÍÊÇÊ²Ã´ÊÓÆµ£»
+		 * åˆ¤æ–­æ’­æ”¾å“ªä¸ªè§†é¢‘ å¦‚æœæ˜¯ä»è¯¾ç¨‹é¡µé¢è·³è½¬è¿‡æ¥çš„è¯ï¼Œè¦æ’­æ”¾çš„è§†é¢‘çš„idæ˜¯1æŒ‡å‘è§†é¢‘åˆ—è¡¨çš„ç¬¬ä¸€ä¸ªè§†é¢‘
+		 * å¦‚æœæ˜¯ä»æ’­æ”¾é¡µé¢è·³è½¬è¿‡æ¥çš„è¯ï¼Œæ˜¯ä»€ä¹ˆidå°±æ˜¯ä»€ä¹ˆè§†é¢‘ï¼›
 		 */
 
 		if (voideId == 1) {
@@ -74,7 +74,7 @@ public class PlayAction implements RequestAware {
 			toPlay = videoDao.search(voideId);
 
 		}
-		// ±éÀúÕıÔÚ²¥·ÅµÄÊÓÆµµÄËùÓĞÌáÎÊ
+		// éå†æ­£åœ¨æ’­æ”¾çš„è§†é¢‘çš„æ‰€æœ‰æé—®
 		List<Question> questions = questionDao.search(toPlay);
 
 		request.put("course", course);

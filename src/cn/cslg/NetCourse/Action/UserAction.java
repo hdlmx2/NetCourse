@@ -34,7 +34,7 @@ public class UserAction implements SessionAware, RequestAware {
 	HasLearnedDao hasLearnedDao = new HasLearnedDao();
 	CourseDao courseDao = new CourseDao();
 
-	// ÓÃ»§µÇÂ¼
+	// ç”¨æˆ·ç™»å½•
 	public String login() {
 		// HttpServletRequest httpRequest = ServletActionContext.getRequest();
 
@@ -50,11 +50,11 @@ public class UserAction implements SessionAware, RequestAware {
 
 	}
 
-	// µÇÂ¼ÍË³ö
+	// ç™»å½•é€€å‡º
 	public String exit() {
 		// Map<String, Object> getCurrentSession =
 		// ActionContext.getContext().getSession();
-		// System.err.println("Êä³öµ±Ç°session£º");
+		// System.err.println("è¾“å‡ºå½“å‰sessionï¼š");
 		// Student user = (Student) getCurrentSession.get("student");
 		this.student = null;
 		session.put("student", student);
@@ -63,7 +63,7 @@ public class UserAction implements SessionAware, RequestAware {
 		return "success";
 	}
 
-	// ÓÃ»§×¢²á
+	// ç”¨æˆ·æ³¨å†Œ
 	public String reg() {
 		Student user = studentDao.search(username);
 		if (user == null) {
@@ -79,11 +79,11 @@ public class UserAction implements SessionAware, RequestAware {
 		}
 	}
 
-	// Ñ§ÉúĞŞ¸Ä¸öÈËĞÅÏ¢
+	// å­¦ç”Ÿä¿®æ”¹ä¸ªäººä¿¡æ¯
 	public String modify() {
 		Map<String, Object> getCurrentSession = ActionContext.getContext().getSession();
 		Student user = (Student) getCurrentSession.get("student");
-		// Èç¹ûÊäÈëµÄÔ­Ê¼ÃÜÂëÕıÈ·ÔòĞŞ¸ÄĞÅÏ¢£¬²¢ÇÒ°Ñµ±Ç°sessionÖĞµÄstudentÉèÎªnull£¬ÖØĞÂµÇÂ¼£¬·ñÔò·µ»Ø´íÎó
+		// å¦‚æœè¾“å…¥çš„åŸå§‹å¯†ç æ­£ç¡®åˆ™ä¿®æ”¹ä¿¡æ¯ï¼Œå¹¶ä¸”æŠŠå½“å‰sessionä¸­çš„studentè®¾ä¸ºnullï¼Œé‡æ–°ç™»å½•ï¼Œå¦åˆ™è¿”å›é”™è¯¯
 		if (user.getPassword().equals(orginPassword)) {
 
 			user.setEmail(email);
@@ -100,7 +100,7 @@ public class UserAction implements SessionAware, RequestAware {
 
 	}
 
-	// ÊÕ²Ø¿Î³Ì
+	// æ”¶è—è¯¾ç¨‹
 	public String addCourse() {
 		Map<String, Object> getCurrentSession = ActionContext.getContext().getSession();
 		Student user = (Student) getCurrentSession.get("student");
@@ -125,13 +125,13 @@ public class UserAction implements SessionAware, RequestAware {
 	}
 
 	/*
-	 * Ìø×ªµ½¸öÈËÉèÖÃÒ³Ãæ£¬ÔÚÇëÇóÓòÖĞ·ÅÈëmyindexÖ¸ÕëÓÃÓÚÃ»ÓĞmyClass,jpsÒ³ÃæÀ´°ë¶Î°üº¬ÄÄ¸öÒ³Ãæ
-	 * myindex==1±íÊ¾°üº¬µÄÊÇstudent_class.jspÒ³Ãæ myindex==2±íÊ¾°üº¬µÄÊÇstudent_dynamic.jspÒ³Ãæ
-	 * myindex==3±íÊ¾°üº¬µÄÊÇstudent_setting.jspÒ³Ãæ
+	 * è·³è½¬åˆ°ä¸ªäººè®¾ç½®é¡µé¢ï¼Œåœ¨è¯·æ±‚åŸŸä¸­æ”¾å…¥myindexæŒ‡é’ˆç”¨äºæ²¡æœ‰myClass,jpsé¡µé¢æ¥åŠæ®µåŒ…å«å“ªä¸ªé¡µé¢
+	 * myindex==1è¡¨ç¤ºåŒ…å«çš„æ˜¯student_class.jspé¡µé¢ myindex==2è¡¨ç¤ºåŒ…å«çš„æ˜¯student_dynamic.jspé¡µé¢
+	 * myindex==3è¡¨ç¤ºåŒ…å«çš„æ˜¯student_setting.jspé¡µé¢
 	 */
 	public String myCourse() {
 		Map<String, Object> getCurrentSession = ActionContext.getContext().getSession();
-		System.err.println("Êä³öµ±Ç°session£º");
+		System.err.println("è¾“å‡ºå½“å‰sessionï¼š");
 		Student user = (Student) getCurrentSession.get("student");
 		List<Course> haslearned = hasLearnedDao.search(user);
 		request.put("mycourse", haslearned);

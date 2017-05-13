@@ -19,7 +19,7 @@ public class MajorDao {
 			session.save(major);
 			tx.commit();
 //			System.out.println(major);
-//			System.out.println("Ìí¼Ó×¨ÒµĞÅÏ¢³É¹¦£¡");
+//			System.out.println("æ·»åŠ ä¸“ä¸šä¿¡æ¯æˆåŠŸï¼");
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -34,7 +34,7 @@ public class MajorDao {
 			session.delete(major);
 			tx.commit();
 //			System.out.println(major);
-//			System.out.println("É¾³ı×¨Òµ³É¹¦£¡");
+//			System.out.println("åˆ é™¤ä¸“ä¸šæˆåŠŸï¼");
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -50,7 +50,7 @@ public class MajorDao {
 			session.update(major);
 			tx.commit();
 //			System.out.println(major);
-//			System.out.println("ĞŞ¸Ä×¨ÒµĞÅÏ¢³É¹¦£¡");
+//			System.out.println("ä¿®æ”¹ä¸“ä¸šä¿¡æ¯æˆåŠŸï¼");
 
 		} catch (Exception e) {
 			e.printStackTrace();

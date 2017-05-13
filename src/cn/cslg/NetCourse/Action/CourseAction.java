@@ -41,15 +41,15 @@ public class CourseAction implements RequestAware {
 			request.put("major", majors);
 		}
 
-		// ËÑË÷³ö×¨ÒµĞÅÏ¢
+		// æœç´¢å‡ºä¸“ä¸šä¿¡æ¯
 
-		// ËÑË÷³ö¿Î³ÌĞÅÏ¢
+		// æœç´¢å‡ºè¯¾ç¨‹ä¿¡æ¯
 		courses = courseDao.search(courseId);
 		//
-		// System.out.println("¿Î³ÌĞÅÏ¢£º");
+		// System.out.println("è¯¾ç¨‹ä¿¡æ¯ï¼š");
 		System.out.println(majors.getMajorName() + courses.getCourseName());
 		request.put("course", courses);
-		// ÅĞ¶Ï±¾¿Î³ÌÊÇ·ñÌí¼Ó
+		// åˆ¤æ–­æœ¬è¯¾ç¨‹æ˜¯å¦æ·»åŠ 
 		courseIsAdd();
 		return "success";
 
@@ -58,7 +58,7 @@ public class CourseAction implements RequestAware {
 	public String myCourse() {
 
 		Map<String, Object> getCurrentSession = ActionContext.getContext().getSession();
-		System.err.println("Êä³öµ±Ç°session£º");
+		System.err.println("è¾“å‡ºå½“å‰sessionï¼š");
 		Student user = (Student) getCurrentSession.get("student");
 		List<Course> haslearned = hasLearnedDao.search(user);
 		request.put("mycourse", haslearned);
@@ -74,16 +74,16 @@ public class CourseAction implements RequestAware {
 		Integer courseId = Integer.parseInt(course);
 
 		if (user == null) {
-			// Ã»ÓĞÌí¼Ó
+			// æ²¡æœ‰æ·»åŠ 
 			request.put("isadd", 0);
 		} else {
 			Course fromCourse = courseDao.search(courseId);
 			boolean isAdd = hasLearnedDao.isAdd(user, fromCourse);
 			if (isAdd == false) {
-				// ¸Ã¿Î³ÌÃ»ÓĞÌí¼Ó
+				// è¯¥è¯¾ç¨‹æ²¡æœ‰æ·»åŠ 
 				request.put("isadd", 0);
 			} else {
-				// ÒÑ¾­Ìí¼Ó
+				// å·²ç»æ·»åŠ 
 				request.put("isadd", 1);
 			}
 
@@ -93,7 +93,7 @@ public class CourseAction implements RequestAware {
 
 	public String searchCourse() {
 		List<Course> list = courseDao.searchCourses(courseName);
-		System.err.println("¿Î³ÌÃû£º" + this.courseName);
+		System.err.println("è¯¾ç¨‹åï¼š" + this.courseName);
 		if (list.size() != 0) {
 			request.put("courseReslut", list);
 			request.put("Key", courseName);

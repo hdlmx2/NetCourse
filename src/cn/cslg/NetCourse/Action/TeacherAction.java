@@ -32,10 +32,10 @@ public class TeacherAction implements RequestAware, SessionAware {
 	public String teacher() {
 		HttpServletRequest httpRequest = ServletActionContext.getRequest();
 		String username = httpRequest.getParameter("id");
-		// ¸ù¾İÓÃ»§Ãû²éÕÒ½ÌÊ¦
+		// æ ¹æ®ç”¨æˆ·åæŸ¥æ‰¾æ•™å¸ˆ
 		Teacher teacher = teacherDao.search(username);
 		// System.out.println(teacher);
-		// ¸ù¾İ½ÌÊ¦²éÕÒËûËù½ÌµÄ¿Î³Ì
+		// æ ¹æ®æ•™å¸ˆæŸ¥æ‰¾ä»–æ‰€æ•™çš„è¯¾ç¨‹
 		List<Course> courses = courseDao.search(teacher);
 
 		request.put("teacher", teacher);
@@ -74,9 +74,9 @@ public class TeacherAction implements RequestAware, SessionAware {
 	public String courseDetail() {
 		HttpServletRequest httpRequest = ServletActionContext.getRequest();
 		Map<String, Object> getCurrentSession = ActionContext.getContext().getSession();
-		// »ñÈ¡ÇëÇócourseId²ÎÊı
+		// è·å–è¯·æ±‚courseIdå‚æ•°
 		String course = httpRequest.getParameter("course");
-		// »ñÈ¡µ±Ç°sessionÖĞµÄÓÃ»§£¬ÒÔ·ÀÖ¹·ÃÎÊÆäËûÀÏÊ¦µÄ¿Î³Ì
+		// è·å–å½“å‰sessionä¸­çš„ç”¨æˆ·ï¼Œä»¥é˜²æ­¢è®¿é—®å…¶ä»–è€å¸ˆçš„è¯¾ç¨‹
 		Teacher currentTeacher = (Teacher) getCurrentSession.get("teacher");
 		if (currentTeacher == null) {
 			return "fail";
@@ -99,9 +99,9 @@ public class TeacherAction implements RequestAware, SessionAware {
 
 		HttpServletRequest httpRequest = ServletActionContext.getRequest();
 		Map<String, Object> getCurrentSession = ActionContext.getContext().getSession();
-		// »ñÈ¡ÇëÇócourseId²ÎÊı
+		// è·å–è¯·æ±‚courseIdå‚æ•°
 		String course = httpRequest.getParameter("course");
-		// »ñÈ¡µ±Ç°sessionÖĞµÄÓÃ»§£¬ÒÔ·ÀÖ¹·ÃÎÊÆäËûÀÏÊ¦µÄ¿Î³Ì
+		// è·å–å½“å‰sessionä¸­çš„ç”¨æˆ·ï¼Œä»¥é˜²æ­¢è®¿é—®å…¶ä»–è€å¸ˆçš„è¯¾ç¨‹
 		Teacher currentTeacher = (Teacher) getCurrentSession.get("teacher");
 		if (currentTeacher == null) {
 			return "fail";

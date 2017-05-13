@@ -26,13 +26,13 @@ public class MajorAction implements RequestAware {
 	CourseSystem courseSystem = new CourseSystem();
 	CourseSystemDao courseSystemDao = new CourseSystemDao();
 	HasLearnedDao hasLearnedDao=new HasLearnedDao();
-//查看课程系统方法
+//鏌ョ湅璇剧▼绯荤粺鏂规硶
 	public String list() {
 		HttpServletRequest httpRequest = ServletActionContext.getRequest();
 		String id = httpRequest.getParameter("id");
 		Integer majorid = Integer.parseInt(id);
 		System.out.println(majorid);
-		// 根据专业id搜索出整个专业的信息，封装成对象
+		// 鏍规嵁涓撲笟id鎼滅储鍑烘暣涓笓涓氱殑淇℃伅锛屽皝瑁呮垚瀵硅薄
 		major = majorDao.search(majorid);
 		List<Course> grade1 = courseSystemDao.search(major, 1);
 		List<Course> grade2 = courseSystemDao.search(major, 2);

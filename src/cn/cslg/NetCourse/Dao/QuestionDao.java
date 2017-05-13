@@ -16,14 +16,14 @@ public class QuestionDao {
 	private static Session session = HibernateSessionFactory.getSession();
 	private static Transaction tx = null;
 
-	// Ìí¼ÓÌáÎÊ
+	// æ·»åŠ æé—®
 	public void add(Question question) {
 		try {
 			tx = session.beginTransaction();
 			session.save(question);
 			tx.commit();
 			// System.out.println(question);
-			// System.out.println("Ìí¼ÓÎÊÌâ³É¹¦£¡");
+			// System.out.println("æ·»åŠ é—®é¢˜æˆåŠŸï¼");
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -33,14 +33,14 @@ public class QuestionDao {
 
 	}
 
-	// É¾³ıÌáÎÊ
+	// åˆ é™¤æé—®
 	public void delete(Question question) {
 		try {
 			tx = session.beginTransaction();
 			session.delete(question);
 			tx.commit();
 			// System.out.println(question);
-			// System.out.println("É¾³ıÎÊÌâ³É¹¦!");
+			// System.out.println("åˆ é™¤é—®é¢˜æˆåŠŸ!");
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -50,14 +50,14 @@ public class QuestionDao {
 
 	}
 
-	// ĞŞ¸ÄÌáÎÊ
+	// ä¿®æ”¹æé—®
 	public void update(Question question) {
 		try {
 			tx = session.beginTransaction();
 			session.update(question);
 			tx.commit();
 			// System.out.println(question);
-			// System.out.println("ĞŞ¸Ä¹ıÎÊÌâ³É¹¦!");
+			// System.out.println("ä¿®æ”¹è¿‡é—®é¢˜æˆåŠŸ!");
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -65,7 +65,7 @@ public class QuestionDao {
 				tx.rollback();
 		}
 	}
-	// ÒÔID²éÑ¯ÎÊÌâĞÅÏ¢
+	// ä»¥IDæŸ¥è¯¢é—®é¢˜ä¿¡æ¯
 
 	public Question search(Integer integer) {
 
@@ -75,7 +75,7 @@ public class QuestionDao {
 
 	}
 
-	// ²éÕÒÓë¸Ã½ÌÊ¦Ïà¹ØµÄÌáÎÊ
+	// æŸ¥æ‰¾ä¸è¯¥æ•™å¸ˆç›¸å…³çš„æé—®
 	public List<Question> search(Teacher teacher) {
 		String hql = "from Question q where q.teacher=:teacher";
 		List<Question> list = session.createQuery(hql).setParameter("teacher", teacher).list();
@@ -86,7 +86,7 @@ public class QuestionDao {
 
 	}
 
-	// ²éÕÒ¸ÃÀÏÊ¦¹ØÓÚ¸ÃÊÓÆµµÄÎÊÌâ
+	// æŸ¥æ‰¾è¯¥è€å¸ˆå…³äºè¯¥è§†é¢‘çš„é—®é¢˜
 	public List<Question> search(Teacher teacher, Video video) {
 		String hql = "from Question q where q.teacher=:teacher and q.video=:video";
 		Query query = session.createQuery(hql);
@@ -100,7 +100,7 @@ public class QuestionDao {
 
 	}
 
-	// ²éÕÒ¸ÃÑ§ÉúËùÓĞµÄÌáÎÊ
+	// æŸ¥æ‰¾è¯¥å­¦ç”Ÿæ‰€æœ‰çš„æé—®
 	public List<Question> search(Student student) {
 
 		String hql = "from Question q where q.student=:student";
@@ -112,7 +112,7 @@ public class QuestionDao {
 
 	}
 
-	// ²éÕÒ¸ÃÑ§Éú¹ØÓÚ¸ÃÊÓÆµµÄËùÓĞÌáÎÊ
+	// æŸ¥æ‰¾è¯¥å­¦ç”Ÿå…³äºè¯¥è§†é¢‘çš„æ‰€æœ‰æé—®
 	public List<Question> search(Student student, Video video) {
 		String hql = "from Question q where q.student=:student and q.video=:video";
 		Query query = session.createQuery(hql);

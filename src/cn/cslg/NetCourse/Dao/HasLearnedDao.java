@@ -23,7 +23,7 @@ public class HasLearnedDao {
 		for (HasLearned hasLearned1 : learned) {
 			if (hasLearned.getCourse().getCourseId().equals(hasLearned1.getCourse().getCourseId())) {
 				isExist = true;
-				System.out.println("¿Î³ÌÒÑ¾­´æÔÚ£¡");
+				System.out.println("è¯¾ç¨‹å·²ç»å­˜åœ¨ï¼");
 				return;
 
 			}
@@ -35,7 +35,7 @@ public class HasLearnedDao {
 				session.save(hasLearned);
 				tx.commit();
 				// System.out.println(hasLearned);
-				// System.out.println("¿Î³ÌÊÕ²Ø³É¹¦£¡");
+				// System.out.println("è¯¾ç¨‹æ”¶è—æˆåŠŸï¼");
 
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -87,10 +87,10 @@ public class HasLearnedDao {
 		query.setParameter("student", student);
 		query.setParameter("course", course);
 		if (query.list().size() == 0) {
-			//Ã»ÓĞÌí¼Ó
+			//æ²¡æœ‰æ·»åŠ 
 			return false;
 		} else {
-			//Ìí¼Ó
+			//æ·»åŠ 
 			return true;
 		}
 	}

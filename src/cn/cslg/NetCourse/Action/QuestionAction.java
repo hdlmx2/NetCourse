@@ -35,10 +35,10 @@ public class QuestionAction implements RequestAware, SessionAware {
 
 		video = videoDao.search(Integer.parseInt(videoId));
 		teacher = teacherDao.search(teacherId);
-		// 获取当前session中的用户信息
+		// 鑾峰彇褰撳墠session涓殑鐢ㄦ埛淇℃伅
 		Map<String, Object> getCurrentSession = ActionContext.getContext().getSession();
 		student = (Student) getCurrentSession.get("student");
-		// 封装question
+		// 灏佽question
 		question.setContext(context);
 		question.setStudent(student);
 		question.setVideo(video);

@@ -1,4 +1,3 @@
-
 package cn.cslg.NetCourse.Dao;
 
 import java.util.List;
@@ -21,7 +20,7 @@ public class InstituteDao {
 			session.save(institute);
 			tx.commit();
 //			System.out.println(institute);
-//			System.out.println("ѧԺ���ӳɹ���");
+//			System.out.println("学院添加成功！");
 		} catch (Exception e) {
 			e.printStackTrace();
 			if (tx != null)
@@ -36,7 +35,7 @@ public class InstituteDao {
 			session.delete(institute);
 			tx.commit();
 //			System.out.println(institute);
-//			System.out.println("ѧԺɾ���ɹ���");
+//			System.out.println("学院删除成功！");
 		} catch (Exception e) {
 			e.printStackTrace();
 			if (tx != null)
@@ -61,7 +60,7 @@ public class InstituteDao {
 			session.update(institute);
 			tx.commit();
 //			System.out.println(institute);
-//			System.out.println("ѧԺ�޸ĳɹ���");
+//			System.out.println("学院修改成功！");
 		} catch (Exception e) {
 			e.printStackTrace();
 			if (tx != null)

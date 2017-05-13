@@ -16,7 +16,7 @@ public class StudentDao {
 			session.save(student);
 			tx.commit();
 //			System.out.println(student);
-//			System.out.println("Ìí¼ÓÑ§ÉúĞÅÏ¢³É¹¦£¡");
+//			System.out.println("æ·»åŠ å­¦ç”Ÿä¿¡æ¯æˆåŠŸï¼");
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -31,7 +31,7 @@ public class StudentDao {
 			session.delete(student);
 			tx.commit();
 //			System.out.println(student);
-//			System.out.println("É¾³ıÑ§ÉúĞÅÏ¢³É¹¦£¡");
+//			System.out.println("åˆ é™¤å­¦ç”Ÿä¿¡æ¯æˆåŠŸï¼");
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -46,7 +46,7 @@ public class StudentDao {
 			session.update(student);
 			tx.commit();
 //			System.out.println(student);
-//			System.out.println("ĞŞ¸ÄÑ§ÉúĞÅÏ¢³É¹¦£¡");
+//			System.out.println("ä¿®æ”¹å­¦ç”Ÿä¿¡æ¯æˆåŠŸï¼");
 
 		} catch (Exception e) {
 			e.printStackTrace();

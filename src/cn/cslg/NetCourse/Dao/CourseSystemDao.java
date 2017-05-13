@@ -17,31 +17,31 @@ public class CourseSystemDao {
 	private static Transaction tx = null;
 
 	/*
-	 * Ìí¼Ó¿Î³ÌÌåÏµĞÅÏ¢£» 1¡¢Ê×ÏÈ¼ì²éÄê¼¶µÄÉèÖÃÊÇ·ñ·ûºÏÒªÇó£» 2¡¢¼ì²é¸Ã¿Î³ÌÊÇ·ñÔÚÖÆ¶¨µÄ×¨ÒµºÍÄê¼¶Ìí¼Ó¹ı £» 3¡¢¼ì²é¸Ã¿Î³ÌÊÇ·ñÔÚÆäËûÄê¼¶Ìí¼Ó¹ı£»
+	 * æ·»åŠ è¯¾ç¨‹ä½“ç³»ä¿¡æ¯ï¼› 1ã€é¦–å…ˆæ£€æŸ¥å¹´çº§çš„è®¾ç½®æ˜¯å¦ç¬¦åˆè¦æ±‚ï¼› 2ã€æ£€æŸ¥è¯¥è¯¾ç¨‹æ˜¯å¦åœ¨åˆ¶å®šçš„ä¸“ä¸šå’Œå¹´çº§æ·»åŠ è¿‡ ï¼› 3ã€æ£€æŸ¥è¯¥è¯¾ç¨‹æ˜¯å¦åœ¨å…¶ä»–å¹´çº§æ·»åŠ è¿‡ï¼›
 	 */ public void add(CourseSystem courseSystem) {
-		// ¼ì²éÄê¼¶ĞÅÏ¢£º
+		// æ£€æŸ¥å¹´çº§ä¿¡æ¯ï¼š
 		if (courseSystem.getGrade() > 4 || courseSystem.getGrade() < 1) {
-			System.out.println("Äê¼¶²»·ûºÏÒªÇó£¡");
+			System.out.println("å¹´çº§ä¸ç¬¦åˆè¦æ±‚ï¼");
 			return;
 		}
-		// ¼ì²é¸Ã¿Î³ÌÊÇ·ñÌí¼Ó¹ı
+		// æ£€æŸ¥è¯¥è¯¾ç¨‹æ˜¯å¦æ·»åŠ è¿‡
 		List<Course> list = search(courseSystem.getMajor(), courseSystem.getGrade());
 		boolean isExist = false;
 		for (Course course : list) {
 
 			if (course.getCourseId().equals(courseSystem.getCourse().getCourseId())) {
 				isExist = true;
-				System.out.println("¸Ã¿Î³ÌÒÑ¾­ÔÚ¸Ã×¨ÒµµÄ¿Î³ÌÌåÏµÖĞ´æÔÚ£¡");
+				System.out.println("è¯¥è¯¾ç¨‹å·²ç»åœ¨è¯¥ä¸“ä¸šçš„è¯¾ç¨‹ä½“ç³»ä¸­å­˜åœ¨ï¼");
 				return;
 			}
 
 		}
-		// ¼ì²é¸Ã¿Î³ÌÊÇ·ñÔÚÆäËûÄê¼¶Ìí¼Ó¹ı
+		// æ£€æŸ¥è¯¥è¯¾ç¨‹æ˜¯å¦åœ¨å…¶ä»–å¹´çº§æ·»åŠ è¿‡
 		Integer grade = search(courseSystem.getMajor(), courseSystem.getCourse()).getGrade();
 		System.out.println(grade);
 
 		if (grade != null) {
-			System.out.println("¸Ã¿Î³ÌÒÑ¾­ÔÚÆäËûÄê¼¶Ìí¼Ó¹ıÁË£¡");
+			System.out.println("è¯¥è¯¾ç¨‹å·²ç»åœ¨å…¶ä»–å¹´çº§æ·»åŠ è¿‡äº†ï¼");
 			return;
 		}
 
@@ -50,7 +50,7 @@ public class CourseSystemDao {
 			session.save(courseSystem);
 			tx.commit();
 //			System.out.println(courseSystem);
-//			System.out.println("¿Î³Ì³É¹¦Ìí¼Óµ½¸Ã×¨Òµ£¡");
+//			System.out.println("è¯¾ç¨‹æˆåŠŸæ·»åŠ åˆ°è¯¥ä¸“ä¸šï¼");
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -65,7 +65,7 @@ public class CourseSystemDao {
 			session.delete(courseSystem);
 			tx.commit();
 //			System.out.println(courseSystem);
-//			System.out.println("¸Ã¿Î³Ì³É¹¦´Ó¸Ã×¨ÒµÖĞÉ¾³ı£¡");
+//			System.out.println("è¯¥è¯¾ç¨‹æˆåŠŸä»è¯¥ä¸“ä¸šä¸­åˆ é™¤ï¼");
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -75,14 +75,14 @@ public class CourseSystemDao {
 		}
 	}
 
-	// ĞŞ¸Ä¿Î³ÌÏµÍ³ĞÅÏ¢
+	// ä¿®æ”¹è¯¾ç¨‹ç³»ç»Ÿä¿¡æ¯
 	public void update(CourseSystem courseSystem) {
 		try {
 			tx = session.beginTransaction();
 			session.update(courseSystem);
 			tx.commit();
 //			System.out.println(courseSystem);
-//			System.out.println("¿Î³ÌÌåÏµĞŞ¸Ä³É¹¦£¡");
+//			System.out.println("è¯¾ç¨‹ä½“ç³»ä¿®æ”¹æˆåŠŸï¼");
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -93,7 +93,7 @@ public class CourseSystemDao {
 
 	}
 
-	// ÒÔÄê¼¶ºÍ×¨ÒµËÑË÷¸Ã×¨ÒµµÄÖÆ¶¨Äê¼¶¿Î³Ì
+	// ä»¥å¹´çº§å’Œä¸“ä¸šæœç´¢è¯¥ä¸“ä¸šçš„åˆ¶å®šå¹´çº§è¯¾ç¨‹
 	public List<Course> search(Major major, Integer grade) {
 
 		String hql = "from CourseSystem cs where cs.major=:major and cs.grade=:grade";
@@ -101,7 +101,7 @@ public class CourseSystemDao {
 		query.setParameter("major", major);
 		query.setParameter("grade", grade);
 		List<CourseSystem> list = query.list();
-		// Ç¿listÖĞµÄ¿Î³Ì·ÅÈëµ½courseLlistÖĞ
+		// å¼ºlistä¸­çš„è¯¾ç¨‹æ”¾å…¥åˆ°courseLlistä¸­
 		List<Course> courseList = new ArrayList<Course>();
 		for (int i = 0; i < list.size(); i++) {
 			courseList.add(list.get(i).getCourse());
@@ -111,7 +111,7 @@ public class CourseSystemDao {
 	}
 
 	/*
-	 * ¸ù¾İ×¨ÒµºÍ¿Î³Ì²éÕÒ¸ÃĞÅÏ¢ËùÔÚµÄÄê¼¶
+	 * æ ¹æ®ä¸“ä¸šå’Œè¯¾ç¨‹æŸ¥æ‰¾è¯¥ä¿¡æ¯æ‰€åœ¨çš„å¹´çº§
 	 * 
 	 */
 	// public Integer search(Major major, Course course) {
